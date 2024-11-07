@@ -50,11 +50,13 @@ class Point {
     }
 
     //Prototype Method
+    //call with instance.coord()
     coord(){ 
-        console.log(`(${this,x}, ${this,y}`)
+        console.log(`(${this.x}, ${this.y})`)
     }
 
     //Static Method
+    //call with Point.distance(p1, p2)
     static distance(p1, p2){
         let x = p1.x - p2.x
         let y = p1.y - p2.y
@@ -64,4 +66,5 @@ class Point {
 
 const t1 = new Point(0,0)
 const t2 = new Point(5,12)
+t2.coord() // (5, 12)
 console.log(Point.distance(t1,t2)) // 13
